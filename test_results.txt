@@ -1,0 +1,12 @@
+test_bad_databases (test_failures.FailureTests.test_bad_databases) ... ok
+test_data_separation (test_failures.FailureTests.test_data_separation) ... ok
+test_invalid_inputs (test_failures.FailureTests.test_invalid_inputs) ... ok
+test_learning_allowed (test_failures.FailureTests.test_learning_allowed) ... ok
+test_missing_file (test_failures.FailureTests.test_missing_file) ... ok
+test_retrieval_failure (test_failures.FailureTests.test_retrieval_failure) ... ok
+test_risk_review (test_failures.FailureTests.test_risk_review) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.016s
+
+OK

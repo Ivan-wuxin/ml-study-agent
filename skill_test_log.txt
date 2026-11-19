@@ -1,0 +1,13 @@
+Three HTTP skill assertions passed
+Starting server 1/1: "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1118-904-0_26.1118.904.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe" skill_server.py
+Waiting for server on port 8766...
+Server ready on port 8766
+
+All 1 server(s) ready
+Running: C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1118-904-0_26.1118.904.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe skill_smoke.py
+
+
+Stopping 1 server(s)...
+Server 1 stopped
+All servers stopped
+

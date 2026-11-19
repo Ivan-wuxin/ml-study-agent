@@ -1,0 +1,1543 @@
+{
+  "environment": "3.12.14",
+  "data_sha256": "bea3059b73737bb821df9c2dfe711db1b652e00a5016eac19f8395ecc0ccc15a",
+  "test_note": "人工编写的小型教学验证集；与训练样例不重复，但由同一作者构造，不代表真实使用分布。阈值0.12为预设启发式，未进行独立验证集调参。",
+  "checks": {
+    "blank": true,
+    "long": true,
+    "nonstring": true,
+    "trace": true
+  },
+  "results": {
+    "retrieval_only": {
+      "task_accuracy": 0.9583333333333334,
+      "macro_f1": 0.942857142857143,
+      "answer_precision": 0.9444444444444444,
+      "coverage": 0.75,
+      "ood_rejection": 1.0,
+      "mean_ms": 0.0440500007243827,
+      "rows": [
+        {
+          "query": "过拟合如何处理",
+          "expected": "overfit",
+          "prediction": "split",
+          "correct": false,
+          "result": {
+            "status": "answered",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.1241,
+            "answer": "先划分训练集和测试集，再在训练集上拟合标准化和特征选择。用Pipeline将预处理与模型组合，在交叉验证内拟合，避免测试信息泄漏。时间序列需保持时间顺序。",
+            "source": "https://scikit-learn.org/stable/common_pitfalls.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "训练准确但验证差",
+          "expected": "overfit",
+          "prediction": "overfit",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "overfit",
+            "document": "overfit",
+            "similarity": 0.1957,
+            "answer": "训练误差低而验证误差高可能是过拟合。可比较训练与验证曲线，使用交叉验证选择正则化强度，并考虑增加数据或降低模型复杂度。测试集仅用于最终评估。",
+            "source": "https://scikit-learn.org/stable/modules/learning_curve.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "正则化能降低复杂度吗",
+          "expected": "overfit",
+          "prediction": "overfit",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "overfit",
+            "document": "overfit",
+            "similarity": 0.2961,
+            "answer": "训练误差低而验证误差高可能是过拟合。可比较训练与验证曲线，使用交叉验证选择正则化强度，并考虑增加数据或降低模型复杂度。测试集仅用于最终评估。",
+            "source": "https://scikit-learn.org/stable/modules/learning_curve.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "测试集能拟合标准化吗",
+          "expected": "split",
+          "prediction": "split",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.2499,
+            "answer": "先划分训练集和测试集，再在训练集上拟合标准化和特征选择。用Pipeline将预处理与模型组合，在交叉验证内拟合，避免测试信息泄漏。时间序列需保持时间顺序。",
+            "source": "https://scikit-learn.org/stable/common_pitfalls.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "数据泄漏怎么避免",
+          "expected": "split",
+          "prediction": "split",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.175,
+            "answer": "先划分训练集和测试集，再在训练集上拟合标准化和特征选择。用Pipeline将预处理与模型组合，在交叉验证内拟合，避免测试信息泄漏。时间序列需保持时间顺序。",
+            "source": "https://scikit-learn.org/stable/common_pitfalls.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "训练集和测试集如何划分",
+          "expected": "split",
+          "prediction": "split",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.3194,
+            "answer": "先划分训练集和测试集，再在训练集上拟合标准化和特征选择。用Pipeline将预处理与模型组合，在交叉验证内拟合，避免测试信息泄漏。时间序列需保持时间顺序。",
+            "source": "https://scikit-learn.org/stable/common_pitfalls.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "分类不平衡如何评估",
+          "expected": "metrics",
+          "prediction": "metrics",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "metrics",
+            "document": "metrics",
+            "similarity": 0.155,
+            "answer": "准确率是预测正确的比例。Precision关注预测为正的样本，Recall关注实际为正的样本；F1是二者调和平均。类别不平衡时应结合宏平均F1、各类召回率和混淆矩阵。",
+            "source": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：metrics",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "召回率与精确率区别",
+          "expected": "metrics",
+          "prediction": "metrics",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "metrics",
+            "document": "metrics",
+            "similarity": 0.1456,
+            "answer": "准确率是预测正确的比例。Precision关注预测为正的样本，Recall关注实际为正的样本；F1是二者调和平均。类别不平衡时应结合宏平均F1、各类召回率和混淆矩阵。",
+            "source": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：metrics",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "宏平均F1是什么",
+          "expected": "metrics",
+          "prediction": "metrics",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "metrics",
+            "document": "metrics",
+            "similarity": 0.2509,
+            "answer": "准确率是预测正确的比例。Precision关注预测为正的样本，Recall关注实际为正的样本；F1是二者调和平均。类别不平衡时应结合宏平均F1、各类召回率和混淆矩阵。",
+            "source": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：metrics",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "朴素贝叶斯为什么平滑",
+          "expected": "bayes",
+          "prediction": "bayes",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "bayes",
+            "document": "bayes",
+            "similarity": 0.3052,
+            "answer": "多项式朴素贝叶斯使用类别先验和特征条件概率进行分类，通常用于词频文本特征。拉普拉斯平滑避免未出现特征概率为零；条件独立假设是近似，不能把分数直接解释成可靠置信度。",
+            "source": "https://scikit-learn.org/stable/modules/naive_bayes.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：bayes",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "条件独立的含义",
+          "expected": "bayes",
+          "prediction": "bayes",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "bayes",
+            "document": "bayes",
+            "similarity": 0.1772,
+            "answer": "多项式朴素贝叶斯使用类别先验和特征条件概率进行分类，通常用于词频文本特征。拉普拉斯平滑避免未出现特征概率为零；条件独立假设是近似，不能把分数直接解释成可靠置信度。",
+            "source": "https://scikit-learn.org/stable/modules/naive_bayes.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：bayes",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "文本分类能用多项式贝叶斯吗",
+          "expected": "bayes",
+          "prediction": "bayes",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "bayes",
+            "document": "bayes",
+            "similarity": 0.3387,
+            "answer": "多项式朴素贝叶斯使用类别先验和特征条件概率进行分类，通常用于词频文本特征。拉普拉斯平滑避免未出现特征概率为零；条件独立假设是近似，不能把分数直接解释成可靠置信度。",
+            "source": "https://scikit-learn.org/stable/modules/naive_bayes.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：bayes",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "TF-IDF怎样检索",
+          "expected": "retrieve",
+          "prediction": "retrieve",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "retrieve",
+            "document": "retrieve",
+            "similarity": 0.3639,
+            "answer": "TF-IDF结合特征在文档中的频率和跨文档的逆文档频率。将向量归一化后可用点积计算余弦相似度。它依赖字面重合，对同义改写和缺少共同字符的问题可能检索失败。",
+            "source": "https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：retrieve",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "余弦相似度的作用",
+          "expected": "retrieve",
+          "prediction": "retrieve",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "retrieve",
+            "document": "retrieve",
+            "similarity": 0.2313,
+            "answer": "TF-IDF结合特征在文档中的频率和跨文档的逆文档频率。将向量归一化后可用点积计算余弦相似度。它依赖字面重合，对同义改写和缺少共同字符的问题可能检索失败。",
+            "source": "https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：retrieve",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "逆文档频率表示什么",
+          "expected": "retrieve",
+          "prediction": "retrieve",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "retrieve",
+            "document": "retrieve",
+            "similarity": 0.1985,
+            "answer": "TF-IDF结合特征在文档中的频率和跨文档的逆文档频率。将向量归一化后可用点积计算余弦相似度。它依赖字面重合，对同义改写和缺少共同字符的问题可能检索失败。",
+            "source": "https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：retrieve",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "K均值的簇数怎么确定",
+          "expected": "cluster",
+          "prediction": "cluster",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "cluster",
+            "document": "cluster",
+            "similarity": 0.2031,
+            "answer": "K均值通过迭代分配样本和更新中心最小化簇内平方距离。需要设置簇数并注意尺度，适合近似球状簇；可用轮廓系数辅助选择，但聚类结果不等于真实类别。",
+            "source": "https://scikit-learn.org/stable/modules/clustering.html#k-means",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：cluster",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "轮廓系数评价什么",
+          "expected": "cluster",
+          "prediction": "cluster",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "cluster",
+            "document": "cluster",
+            "similarity": 0.13,
+            "answer": "K均值通过迭代分配样本和更新中心最小化簇内平方距离。需要设置簇数并注意尺度，适合近似球状簇；可用轮廓系数辅助选择，但聚类结果不等于真实类别。",
+            "source": "https://scikit-learn.org/stable/modules/clustering.html#k-means",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：cluster",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "聚类需要标准化吗",
+          "expected": "cluster",
+          "prediction": "cluster",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "cluster",
+            "document": "cluster",
+            "similarity": 0.1626,
+            "answer": "K均值通过迭代分配样本和更新中心最小化簇内平方距离。需要设置簇数并注意尺度，适合近似球状簇；可用轮廓系数辅助选择，但聚类结果不等于真实类别。",
+            "source": "https://scikit-learn.org/stable/modules/clustering.html#k-means",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：cluster",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "明天香港天气怎样",
+          "expected": null,
+          "prediction": null,
+          "correct": true,
+          "result": {
+            "status": "review",
+            "topic": "overfit",
+            "document": "metrics",
+            "similarity": 0.0171,
+            "answer": "资料不足，请补充课程上下文并请教师复核。",
+            "source": null,
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "请求人工复核"
+            ]
+          }
+        },
+        {
+          "query": "帮我订火车票",
+          "expected": null,
+          "prediction": null,
+          "correct": true,
+          "result": {
+            "status": "review",
+            "topic": "overfit",
+            "document": "overfit",
+            "similarity": 0.0,
+            "answer": "资料不足，请补充课程上下文并请教师复核。",
+            "source": null,
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "请求人工复核"
+            ]
+          }
+        },
+        {
+          "query": "今天食堂有什么",
+          "expected": null,
+          "prediction": null,
+          "correct": true,
+          "result": {
+            "status": "review",
+            "topic": "retrieve",
+            "document": "overfit",
+            "similarity": 0.0,
+            "answer": "资料不足，请补充课程上下文并请教师复核。",
+            "source": null,
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：retrieve",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "请求人工复核"
+            ]
+          }
+        },
+        {
+          "query": "我的银行卡密码是什么",
+          "expected": null,
+          "prediction": null,
+          "correct": true,
+          "result": {
+            "status": "review",
+            "reason": "high_impact",
+            "answer": "此问题涉及金融，超出课程资料范围。请由相应专业人员或有权限的负责人核实；本系统不执行操作。",
+            "source": null,
+            "trace": [
+              "校验输入",
+              "高影响关键词检查",
+              "转交人工复核"
+            ]
+          }
+        },
+        {
+          "query": "宿舍水费在哪里交",
+          "expected": null,
+          "prediction": null,
+          "correct": true,
+          "result": {
+            "status": "review",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.0306,
+            "answer": "资料不足，请补充课程上下文并请教师复核。",
+            "source": null,
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "请求人工复核"
+            ]
+          }
+        },
+        {
+          "query": "推荐一部电影",
+          "expected": null,
+          "prediction": null,
+          "correct": true,
+          "result": {
+            "status": "review",
+            "topic": "overfit",
+            "document": "retrieve",
+            "similarity": 0.0177,
+            "answer": "资料不足，请补充课程上下文并请教师复核。",
+            "source": null,
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "请求人工复核"
+            ]
+          }
+        }
+      ]
+    },
+    "full": {
+      "task_accuracy": 0.9583333333333334,
+      "macro_f1": 0.942857142857143,
+      "answer_precision": 0.9444444444444444,
+      "coverage": 0.75,
+      "ood_rejection": 1.0,
+      "mean_ms": 0.04694999855322143,
+      "rows": [
+        {
+          "query": "过拟合如何处理",
+          "expected": "overfit",
+          "prediction": "split",
+          "correct": false,
+          "result": {
+            "status": "answered",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.1241,
+            "answer": "先划分训练集和测试集，再在训练集上拟合标准化和特征选择。用Pipeline将预处理与模型组合，在交叉验证内拟合，避免测试信息泄漏。时间序列需保持时间顺序。",
+            "source": "https://scikit-learn.org/stable/common_pitfalls.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "训练准确但验证差",
+          "expected": "overfit",
+          "prediction": "overfit",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "overfit",
+            "document": "overfit",
+            "similarity": 0.1957,
+            "answer": "训练误差低而验证误差高可能是过拟合。可比较训练与验证曲线，使用交叉验证选择正则化强度，并考虑增加数据或降低模型复杂度。测试集仅用于最终评估。",
+            "source": "https://scikit-learn.org/stable/modules/learning_curve.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "正则化能降低复杂度吗",
+          "expected": "overfit",
+          "prediction": "overfit",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "overfit",
+            "document": "overfit",
+            "similarity": 0.2961,
+            "answer": "训练误差低而验证误差高可能是过拟合。可比较训练与验证曲线，使用交叉验证选择正则化强度，并考虑增加数据或降低模型复杂度。测试集仅用于最终评估。",
+            "source": "https://scikit-learn.org/stable/modules/learning_curve.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "测试集能拟合标准化吗",
+          "expected": "split",
+          "prediction": "split",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.2499,
+            "answer": "先划分训练集和测试集，再在训练集上拟合标准化和特征选择。用Pipeline将预处理与模型组合，在交叉验证内拟合，避免测试信息泄漏。时间序列需保持时间顺序。",
+            "source": "https://scikit-learn.org/stable/common_pitfalls.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "数据泄漏怎么避免",
+          "expected": "split",
+          "prediction": "split",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.175,
+            "answer": "先划分训练集和测试集，再在训练集上拟合标准化和特征选择。用Pipeline将预处理与模型组合，在交叉验证内拟合，避免测试信息泄漏。时间序列需保持时间顺序。",
+            "source": "https://scikit-learn.org/stable/common_pitfalls.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "训练集和测试集如何划分",
+          "expected": "split",
+          "prediction": "split",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.3194,
+            "answer": "先划分训练集和测试集，再在训练集上拟合标准化和特征选择。用Pipeline将预处理与模型组合，在交叉验证内拟合，避免测试信息泄漏。时间序列需保持时间顺序。",
+            "source": "https://scikit-learn.org/stable/common_pitfalls.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "分类不平衡如何评估",
+          "expected": "metrics",
+          "prediction": "metrics",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "metrics",
+            "document": "metrics",
+            "similarity": 0.155,
+            "answer": "准确率是预测正确的比例。Precision关注预测为正的样本，Recall关注实际为正的样本；F1是二者调和平均。类别不平衡时应结合宏平均F1、各类召回率和混淆矩阵。",
+            "source": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：metrics",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "召回率与精确率区别",
+          "expected": "metrics",
+          "prediction": "metrics",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "metrics",
+            "document": "metrics",
+            "similarity": 0.1456,
+            "answer": "准确率是预测正确的比例。Precision关注预测为正的样本，Recall关注实际为正的样本；F1是二者调和平均。类别不平衡时应结合宏平均F1、各类召回率和混淆矩阵。",
+            "source": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：metrics",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "宏平均F1是什么",
+          "expected": "metrics",
+          "prediction": "metrics",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "metrics",
+            "document": "metrics",
+            "similarity": 0.2509,
+            "answer": "准确率是预测正确的比例。Precision关注预测为正的样本，Recall关注实际为正的样本；F1是二者调和平均。类别不平衡时应结合宏平均F1、各类召回率和混淆矩阵。",
+            "source": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：metrics",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "朴素贝叶斯为什么平滑",
+          "expected": "bayes",
+          "prediction": "bayes",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "bayes",
+            "document": "bayes",
+            "similarity": 0.3052,
+            "answer": "多项式朴素贝叶斯使用类别先验和特征条件概率进行分类，通常用于词频文本特征。拉普拉斯平滑避免未出现特征概率为零；条件独立假设是近似，不能把分数直接解释成可靠置信度。",
+            "source": "https://scikit-learn.org/stable/modules/naive_bayes.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：bayes",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "条件独立的含义",
+          "expected": "bayes",
+          "prediction": "bayes",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "bayes",
+            "document": "bayes",
+            "similarity": 0.1772,
+            "answer": "多项式朴素贝叶斯使用类别先验和特征条件概率进行分类，通常用于词频文本特征。拉普拉斯平滑避免未出现特征概率为零；条件独立假设是近似，不能把分数直接解释成可靠置信度。",
+            "source": "https://scikit-learn.org/stable/modules/naive_bayes.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：bayes",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "文本分类能用多项式贝叶斯吗",
+          "expected": "bayes",
+          "prediction": "bayes",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "bayes",
+            "document": "bayes",
+            "similarity": 0.3387,
+            "answer": "多项式朴素贝叶斯使用类别先验和特征条件概率进行分类，通常用于词频文本特征。拉普拉斯平滑避免未出现特征概率为零；条件独立假设是近似，不能把分数直接解释成可靠置信度。",
+            "source": "https://scikit-learn.org/stable/modules/naive_bayes.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：bayes",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "TF-IDF怎样检索",
+          "expected": "retrieve",
+          "prediction": "retrieve",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "retrieve",
+            "document": "retrieve",
+            "similarity": 0.3639,
+            "answer": "TF-IDF结合特征在文档中的频率和跨文档的逆文档频率。将向量归一化后可用点积计算余弦相似度。它依赖字面重合，对同义改写和缺少共同字符的问题可能检索失败。",
+            "source": "https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：retrieve",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "余弦相似度的作用",
+          "expected": "retrieve",
+          "prediction": "retrieve",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "retrieve",
+            "document": "retrieve",
+            "similarity": 0.2313,
+            "answer": "TF-IDF结合特征在文档中的频率和跨文档的逆文档频率。将向量归一化后可用点积计算余弦相似度。它依赖字面重合，对同义改写和缺少共同字符的问题可能检索失败。",
+            "source": "https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：retrieve",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "逆文档频率表示什么",
+          "expected": "retrieve",
+          "prediction": "retrieve",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "retrieve",
+            "document": "retrieve",
+            "similarity": 0.1985,
+            "answer": "TF-IDF结合特征在文档中的频率和跨文档的逆文档频率。将向量归一化后可用点积计算余弦相似度。它依赖字面重合，对同义改写和缺少共同字符的问题可能检索失败。",
+            "source": "https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：retrieve",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "K均值的簇数怎么确定",
+          "expected": "cluster",
+          "prediction": "cluster",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "cluster",
+            "document": "cluster",
+            "similarity": 0.2031,
+            "answer": "K均值通过迭代分配样本和更新中心最小化簇内平方距离。需要设置簇数并注意尺度，适合近似球状簇；可用轮廓系数辅助选择，但聚类结果不等于真实类别。",
+            "source": "https://scikit-learn.org/stable/modules/clustering.html#k-means",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：cluster",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "轮廓系数评价什么",
+          "expected": "cluster",
+          "prediction": "cluster",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "cluster",
+            "document": "cluster",
+            "similarity": 0.13,
+            "answer": "K均值通过迭代分配样本和更新中心最小化簇内平方距离。需要设置簇数并注意尺度，适合近似球状簇；可用轮廓系数辅助选择，但聚类结果不等于真实类别。",
+            "source": "https://scikit-learn.org/stable/modules/clustering.html#k-means",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：cluster",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "聚类需要标准化吗",
+          "expected": "cluster",
+          "prediction": "cluster",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "cluster",
+            "document": "cluster",
+            "similarity": 0.1626,
+            "answer": "K均值通过迭代分配样本和更新中心最小化簇内平方距离。需要设置簇数并注意尺度，适合近似球状簇；可用轮廓系数辅助选择，但聚类结果不等于真实类别。",
+            "source": "https://scikit-learn.org/stable/modules/clustering.html#k-means",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：cluster",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "明天香港天气怎样",
+          "expected": null,
+          "prediction": null,
+          "correct": true,
+          "result": {
+            "status": "review",
+            "topic": "overfit",
+            "document": "overfit",
+            "similarity": 0.0,
+            "answer": "资料不足，请补充课程上下文并请教师复核。",
+            "source": null,
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "请求人工复核"
+            ]
+          }
+        },
+        {
+          "query": "帮我订火车票",
+          "expected": null,
+          "prediction": null,
+          "correct": true,
+          "result": {
+            "status": "review",
+            "topic": "overfit",
+            "document": "overfit",
+            "similarity": 0.0,
+            "answer": "资料不足，请补充课程上下文并请教师复核。",
+            "source": null,
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "请求人工复核"
+            ]
+          }
+        },
+        {
+          "query": "今天食堂有什么",
+          "expected": null,
+          "prediction": null,
+          "correct": true,
+          "result": {
+            "status": "review",
+            "topic": "retrieve",
+            "document": "retrieve",
+            "similarity": 0.0,
+            "answer": "资料不足，请补充课程上下文并请教师复核。",
+            "source": null,
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：retrieve",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "请求人工复核"
+            ]
+          }
+        },
+        {
+          "query": "我的银行卡密码是什么",
+          "expected": null,
+          "prediction": null,
+          "correct": true,
+          "result": {
+            "status": "review",
+            "reason": "high_impact",
+            "answer": "此问题涉及金融，超出课程资料范围。请由相应专业人员或有权限的负责人核实；本系统不执行操作。",
+            "source": null,
+            "trace": [
+              "校验输入",
+              "高影响关键词检查",
+              "转交人工复核"
+            ]
+          }
+        },
+        {
+          "query": "宿舍水费在哪里交",
+          "expected": null,
+          "prediction": null,
+          "correct": true,
+          "result": {
+            "status": "review",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.0306,
+            "answer": "资料不足，请补充课程上下文并请教师复核。",
+            "source": null,
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "请求人工复核"
+            ]
+          }
+        },
+        {
+          "query": "推荐一部电影",
+          "expected": null,
+          "prediction": null,
+          "correct": true,
+          "result": {
+            "status": "review",
+            "topic": "overfit",
+            "document": "overfit",
+            "similarity": 0.0,
+            "answer": "资料不足，请补充课程上下文并请教师复核。",
+            "source": null,
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "请求人工复核"
+            ]
+          }
+        }
+      ]
+    },
+    "no_reject": {
+      "task_accuracy": 0.75,
+      "macro_f1": 0.8511904761904762,
+      "answer_precision": 0.7391304347826086,
+      "coverage": 0.9583333333333334,
+      "ood_rejection": 0.16666666666666666,
+      "mean_ms": 0.048316665925085545,
+      "rows": [
+        {
+          "query": "过拟合如何处理",
+          "expected": "overfit",
+          "prediction": "split",
+          "correct": false,
+          "result": {
+            "status": "answered",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.1241,
+            "answer": "先划分训练集和测试集，再在训练集上拟合标准化和特征选择。用Pipeline将预处理与模型组合，在交叉验证内拟合，避免测试信息泄漏。时间序列需保持时间顺序。",
+            "source": "https://scikit-learn.org/stable/common_pitfalls.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "训练准确但验证差",
+          "expected": "overfit",
+          "prediction": "overfit",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "overfit",
+            "document": "overfit",
+            "similarity": 0.1957,
+            "answer": "训练误差低而验证误差高可能是过拟合。可比较训练与验证曲线，使用交叉验证选择正则化强度，并考虑增加数据或降低模型复杂度。测试集仅用于最终评估。",
+            "source": "https://scikit-learn.org/stable/modules/learning_curve.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "正则化能降低复杂度吗",
+          "expected": "overfit",
+          "prediction": "overfit",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "overfit",
+            "document": "overfit",
+            "similarity": 0.2961,
+            "answer": "训练误差低而验证误差高可能是过拟合。可比较训练与验证曲线，使用交叉验证选择正则化强度，并考虑增加数据或降低模型复杂度。测试集仅用于最终评估。",
+            "source": "https://scikit-learn.org/stable/modules/learning_curve.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "测试集能拟合标准化吗",
+          "expected": "split",
+          "prediction": "split",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.2499,
+            "answer": "先划分训练集和测试集，再在训练集上拟合标准化和特征选择。用Pipeline将预处理与模型组合，在交叉验证内拟合，避免测试信息泄漏。时间序列需保持时间顺序。",
+            "source": "https://scikit-learn.org/stable/common_pitfalls.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "数据泄漏怎么避免",
+          "expected": "split",
+          "prediction": "split",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.175,
+            "answer": "先划分训练集和测试集，再在训练集上拟合标准化和特征选择。用Pipeline将预处理与模型组合，在交叉验证内拟合，避免测试信息泄漏。时间序列需保持时间顺序。",
+            "source": "https://scikit-learn.org/stable/common_pitfalls.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "训练集和测试集如何划分",
+          "expected": "split",
+          "prediction": "split",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.3194,
+            "answer": "先划分训练集和测试集，再在训练集上拟合标准化和特征选择。用Pipeline将预处理与模型组合，在交叉验证内拟合，避免测试信息泄漏。时间序列需保持时间顺序。",
+            "source": "https://scikit-learn.org/stable/common_pitfalls.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "分类不平衡如何评估",
+          "expected": "metrics",
+          "prediction": "metrics",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "metrics",
+            "document": "metrics",
+            "similarity": 0.155,
+            "answer": "准确率是预测正确的比例。Precision关注预测为正的样本，Recall关注实际为正的样本；F1是二者调和平均。类别不平衡时应结合宏平均F1、各类召回率和混淆矩阵。",
+            "source": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：metrics",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "召回率与精确率区别",
+          "expected": "metrics",
+          "prediction": "metrics",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "metrics",
+            "document": "metrics",
+            "similarity": 0.1456,
+            "answer": "准确率是预测正确的比例。Precision关注预测为正的样本，Recall关注实际为正的样本；F1是二者调和平均。类别不平衡时应结合宏平均F1、各类召回率和混淆矩阵。",
+            "source": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：metrics",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "宏平均F1是什么",
+          "expected": "metrics",
+          "prediction": "metrics",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "metrics",
+            "document": "metrics",
+            "similarity": 0.2509,
+            "answer": "准确率是预测正确的比例。Precision关注预测为正的样本，Recall关注实际为正的样本；F1是二者调和平均。类别不平衡时应结合宏平均F1、各类召回率和混淆矩阵。",
+            "source": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：metrics",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "朴素贝叶斯为什么平滑",
+          "expected": "bayes",
+          "prediction": "bayes",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "bayes",
+            "document": "bayes",
+            "similarity": 0.3052,
+            "answer": "多项式朴素贝叶斯使用类别先验和特征条件概率进行分类，通常用于词频文本特征。拉普拉斯平滑避免未出现特征概率为零；条件独立假设是近似，不能把分数直接解释成可靠置信度。",
+            "source": "https://scikit-learn.org/stable/modules/naive_bayes.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：bayes",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "条件独立的含义",
+          "expected": "bayes",
+          "prediction": "bayes",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "bayes",
+            "document": "bayes",
+            "similarity": 0.1772,
+            "answer": "多项式朴素贝叶斯使用类别先验和特征条件概率进行分类，通常用于词频文本特征。拉普拉斯平滑避免未出现特征概率为零；条件独立假设是近似，不能把分数直接解释成可靠置信度。",
+            "source": "https://scikit-learn.org/stable/modules/naive_bayes.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：bayes",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "文本分类能用多项式贝叶斯吗",
+          "expected": "bayes",
+          "prediction": "bayes",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "bayes",
+            "document": "bayes",
+            "similarity": 0.3387,
+            "answer": "多项式朴素贝叶斯使用类别先验和特征条件概率进行分类，通常用于词频文本特征。拉普拉斯平滑避免未出现特征概率为零；条件独立假设是近似，不能把分数直接解释成可靠置信度。",
+            "source": "https://scikit-learn.org/stable/modules/naive_bayes.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：bayes",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "TF-IDF怎样检索",
+          "expected": "retrieve",
+          "prediction": "retrieve",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "retrieve",
+            "document": "retrieve",
+            "similarity": 0.3639,
+            "answer": "TF-IDF结合特征在文档中的频率和跨文档的逆文档频率。将向量归一化后可用点积计算余弦相似度。它依赖字面重合，对同义改写和缺少共同字符的问题可能检索失败。",
+            "source": "https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：retrieve",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "余弦相似度的作用",
+          "expected": "retrieve",
+          "prediction": "retrieve",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "retrieve",
+            "document": "retrieve",
+            "similarity": 0.2313,
+            "answer": "TF-IDF结合特征在文档中的频率和跨文档的逆文档频率。将向量归一化后可用点积计算余弦相似度。它依赖字面重合，对同义改写和缺少共同字符的问题可能检索失败。",
+            "source": "https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：retrieve",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "逆文档频率表示什么",
+          "expected": "retrieve",
+          "prediction": "retrieve",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "retrieve",
+            "document": "retrieve",
+            "similarity": 0.1985,
+            "answer": "TF-IDF结合特征在文档中的频率和跨文档的逆文档频率。将向量归一化后可用点积计算余弦相似度。它依赖字面重合，对同义改写和缺少共同字符的问题可能检索失败。",
+            "source": "https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：retrieve",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "K均值的簇数怎么确定",
+          "expected": "cluster",
+          "prediction": "cluster",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "cluster",
+            "document": "cluster",
+            "similarity": 0.2031,
+            "answer": "K均值通过迭代分配样本和更新中心最小化簇内平方距离。需要设置簇数并注意尺度，适合近似球状簇；可用轮廓系数辅助选择，但聚类结果不等于真实类别。",
+            "source": "https://scikit-learn.org/stable/modules/clustering.html#k-means",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：cluster",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "轮廓系数评价什么",
+          "expected": "cluster",
+          "prediction": "cluster",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "cluster",
+            "document": "cluster",
+            "similarity": 0.13,
+            "answer": "K均值通过迭代分配样本和更新中心最小化簇内平方距离。需要设置簇数并注意尺度，适合近似球状簇；可用轮廓系数辅助选择，但聚类结果不等于真实类别。",
+            "source": "https://scikit-learn.org/stable/modules/clustering.html#k-means",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：cluster",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "聚类需要标准化吗",
+          "expected": "cluster",
+          "prediction": "cluster",
+          "correct": true,
+          "result": {
+            "status": "answered",
+            "topic": "cluster",
+            "document": "cluster",
+            "similarity": 0.1626,
+            "answer": "K均值通过迭代分配样本和更新中心最小化簇内平方距离。需要设置簇数并注意尺度，适合近似球状簇；可用轮廓系数辅助选择，但聚类结果不等于真实类别。",
+            "source": "https://scikit-learn.org/stable/modules/clustering.html#k-means",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：cluster",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "明天香港天气怎样",
+          "expected": null,
+          "prediction": "overfit",
+          "correct": false,
+          "result": {
+            "status": "answered",
+            "topic": "overfit",
+            "document": "overfit",
+            "similarity": 0.0,
+            "answer": "训练误差低而验证误差高可能是过拟合。可比较训练与验证曲线，使用交叉验证选择正则化强度，并考虑增加数据或降低模型复杂度。测试集仅用于最终评估。",
+            "source": "https://scikit-learn.org/stable/modules/learning_curve.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "帮我订火车票",
+          "expected": null,
+          "prediction": "overfit",
+          "correct": false,
+          "result": {
+            "status": "answered",
+            "topic": "overfit",
+            "document": "overfit",
+            "similarity": 0.0,
+            "answer": "训练误差低而验证误差高可能是过拟合。可比较训练与验证曲线，使用交叉验证选择正则化强度，并考虑增加数据或降低模型复杂度。测试集仅用于最终评估。",
+            "source": "https://scikit-learn.org/stable/modules/learning_curve.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "今天食堂有什么",
+          "expected": null,
+          "prediction": "retrieve",
+          "correct": false,
+          "result": {
+            "status": "answered",
+            "topic": "retrieve",
+            "document": "retrieve",
+            "similarity": 0.0,
+            "answer": "TF-IDF结合特征在文档中的频率和跨文档的逆文档频率。将向量归一化后可用点积计算余弦相似度。它依赖字面重合，对同义改写和缺少共同字符的问题可能检索失败。",
+            "source": "https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：retrieve",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "我的银行卡密码是什么",
+          "expected": null,
+          "prediction": null,
+          "correct": true,
+          "result": {
+            "status": "review",
+            "reason": "high_impact",
+            "answer": "此问题涉及金融，超出课程资料范围。请由相应专业人员或有权限的负责人核实；本系统不执行操作。",
+            "source": null,
+            "trace": [
+              "校验输入",
+              "高影响关键词检查",
+              "转交人工复核"
+            ]
+          }
+        },
+        {
+          "query": "宿舍水费在哪里交",
+          "expected": null,
+          "prediction": "split",
+          "correct": false,
+          "result": {
+            "status": "answered",
+            "topic": "split",
+            "document": "split",
+            "similarity": 0.0306,
+            "answer": "先划分训练集和测试集，再在训练集上拟合标准化和特征选择。用Pipeline将预处理与模型组合，在交叉验证内拟合，避免测试信息泄漏。时间序列需保持时间顺序。",
+            "source": "https://scikit-learn.org/stable/common_pitfalls.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：split",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        },
+        {
+          "query": "推荐一部电影",
+          "expected": null,
+          "prediction": "overfit",
+          "correct": false,
+          "result": {
+            "status": "answered",
+            "topic": "overfit",
+            "document": "overfit",
+            "similarity": 0.0,
+            "answer": "训练误差低而验证误差高可能是过拟合。可比较训练与验证曲线，使用交叉验证选择正则化强度，并考虑增加数据或降低模型复杂度。测试集仅用于最终评估。",
+            "source": "https://scikit-learn.org/stable/modules/learning_curve.html",
+            "trace": [
+              "校验输入",
+              "朴素贝叶斯主题分类：overfit",
+              "TF-IDF余弦检索",
+              "阈值检查：0.12",
+              "返回资料摘要及来源"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

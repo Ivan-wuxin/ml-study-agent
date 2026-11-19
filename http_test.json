@@ -1,0 +1,48 @@
+[
+  {
+    "query": "过拟合怎么办",
+    "result": {
+      "status": "answered",
+      "topic": "overfit",
+      "document": "overfit",
+      "similarity": 0.1295,
+      "answer": "训练误差低而验证误差高可能是过拟合。可比较训练与验证曲线，使用交叉验证选择正则化强度，并考虑增加数据或降低模型复杂度。测试集仅用于最终评估。",
+      "source": "https://scikit-learn.org/stable/modules/learning_curve.html",
+      "trace": [
+        "校验输入",
+        "朴素贝叶斯主题分类：overfit",
+        "TF-IDF余弦检索",
+        "阈值检查：0.12",
+        "返回资料摘要及来源"
+      ]
+    }
+  },
+  {
+    "query": "帮我订火车票",
+    "result": {
+      "status": "review",
+      "topic": "overfit",
+      "document": "overfit",
+      "similarity": 0.0,
+      "answer": "资料不足，请补充课程上下文并请教师复核。",
+      "source": null,
+      "trace": [
+        "校验输入",
+        "朴素贝叶斯主题分类：overfit",
+        "TF-IDF余弦检索",
+        "阈值检查：0.12",
+        "请求人工复核"
+      ]
+    }
+  },
+  {
+    "query": "",
+    "result": {
+      "status": "invalid",
+      "answer": "请输入1—500字的学习问题",
+      "trace": [
+        "输入校验失败"
+      ]
+    }
+  }
+]
